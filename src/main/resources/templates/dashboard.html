@@ -1,0 +1,58 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Dashboard</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h2>Dashboard</h2>-->
+
+<!--<form action="#" method="get">-->
+<!--    <label for="hashtag">Filter by hashtag/label:</label>-->
+<!--    <input type="text" id="hashtag" name="hashtag">-->
+<!--    <input type="submit" value="Filter">-->
+<!--</form>-->
+
+<!--<table>-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th>Content</th>-->
+<!--        <th>User</th>-->
+<!--        <th>Hashtags</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr th:each="post : ${posts}">-->
+<!--        <td th:text="${post.content}"></td>-->
+<!--        <td th:text="${post.user.username}"></td>-->
+<!--        <td th:text="${post.hashtags}"></td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--</table>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+<h1>Admin Dashboard</h1>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Created At</th>
+    </tr>
+    <tr th:each="post : ${posts}">
+        <td th:text="${post.title}"></td>
+        <td th:text="${post.author.username}"></td>
+        <td th:text="${post.createdAt}"></td>
+    </tr>
+</table>
+</body>
+</html>

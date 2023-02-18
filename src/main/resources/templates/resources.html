@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resources</title>
+</head>
+<body>
+<h1>Resources</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>URL</th>
+    </tr>
+    <tr th:each="resource : ${resources}">
+        <td th:text="${resource.name}"></td>
+        <td th:text="${resource.description}"></td>
+        <td><a th:href="${resource.url}"></a></td>
+    <tr>
+    <td><input type="text" name="name" required></td>
+    <td><textarea name="description" required></textarea></td>
+    <td><input type="url" name="url" required></td>
+    <td><button type="submit">Create</button></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
